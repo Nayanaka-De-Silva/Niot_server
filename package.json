@@ -1,0 +1,20 @@
+{
+  "name": "niot_server",
+  "version": "1.0.0",
+  "description": "An IoT Platform that's accessible to anyone, everywhere.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "IoT"
+  ],
+  "author": "Karunakalage Nayanaka Senura De Silva",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
