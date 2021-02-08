@@ -1,11 +1,22 @@
 const express = require('express')
+const port = process.env.PORT || 3000
 const app = express()
-const port = 3000
+const http = require('http').Server(app)
+const io = require('socket.io')(http)
+
 
 app.get('/', (req, res) => {
-    res.send('Hello world!');
+    res.sendFile(__dirname + '/server.html')
 })
 
-app.listen(port, () => {
+io.on('connection', (socket) => {
+    console.log('A user has connected')
+
+    socket.on('disconnect', () => {
+        console.log('A user has disconnected')
+    })
+})
+
+http.listen(port, () => {
     console.log(`Server is running on port ${port}`)
 })
