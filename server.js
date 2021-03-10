@@ -10,10 +10,12 @@ app.get('/', (req, res) => {
 })
 
 io.on('connection', (socket) => {
-    console.log('A user has connected')
+    console.log('Device is connected')
+
+    socket.emit('test', 'Test Message')
 
     socket.on('disconnect', () => {
-        console.log('A user has disconnected')
+        console.log('Device has disconnected')
     })
 })
 

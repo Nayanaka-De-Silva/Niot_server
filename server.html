@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Socket.IO chat</title>
+    <title>NIoT Main</title>
     <script src="/socket.io/socket.io.js"></script>
     <script>
-        var socket = io();
+        const updateMessage = (message) => {
+          document.getElementById("Message").innerHTML = message
+        }
+
+        const socket = io();
+
+        socket.on('test', (arg) => {
+          updateMessage(arg)
+        })
     </script>
   </head>
   <body>
-    Hello!
+    <p id="Message"></p>
   </body>
 </html>
