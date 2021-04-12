@@ -4,7 +4,8 @@
   "description": "An IoT Platform that's accessible to anyone, everywhere.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
   },
   "keywords": [
     "IoT"
@@ -13,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "socket.io": "^3.1.1"
+    "ws": "^7.4.4"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
