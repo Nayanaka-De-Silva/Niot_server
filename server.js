@@ -22,6 +22,7 @@ wss.on('connection', (ws)=>{
         ws.send(`Server received: ${message}`);
     });
     ws.send('Welcome to NIoT server');
+    console.log('New client connected.'); 
 });
 
 server.listen(port, ()=>{
