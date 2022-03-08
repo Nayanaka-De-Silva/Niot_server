@@ -7,6 +7,7 @@ const port = process.env.PORT || 4000;
 // Routes
 const palette = require('./routes/palettes');
 const cardInfo = require('./routes/cardInfo');
+const options = require('./routes/options');
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(cors());
 
 app.use("/cardInfo", cardInfo);
 app.use("/leds/palette", palette);
+app.use("/leds/options", options);
 
 // Not Found Handler
 app.use((req, res, next) => {

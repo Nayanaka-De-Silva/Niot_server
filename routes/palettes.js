@@ -14,4 +14,6 @@ router.get('/:palette', (req, res) => {
     res.status(200).json(palette);
 });
 
+
+
 module.exports = router;
