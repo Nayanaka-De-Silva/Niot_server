@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  app:
+    image: node:12.18.1
+    command: "npm start"
+    ports:
+      - 4000:3000
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      PORT: 3000 
