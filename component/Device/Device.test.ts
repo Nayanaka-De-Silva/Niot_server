@@ -1,11 +1,10 @@
-import {Device, DeviceMode} from "../Device.class";
+import {Device, DeviceMode} from "./Device.class";
 
 describe('Device Setup', () => {
   let device: Device;
 
   beforeEach(() => {
     device = new Device();
-    
   })
 
   afterEach(() => {
